@@ -1,0 +1,15 @@
+.text-success{
+  color: green;
+}
+
+.text-primary{
+  color: blue;
+}
+
+.text-failure{
+  color: red;
+}
+
+.text-special{
+  font-style: italic;
+}

@@ -1,0 +1,38 @@
+<h2>
+  This is example of : {{interpol}}
+</h2>
+<p>
+  {{"Concat Example in " + interpol}}
+  {{interpol.length}}
+  {{interpol.toUpperCase()}}
+  {{"Function Call example : " + greetUser()}}
+</p>
+<hr>
+<h2>
+ Property Binding
+</h2>
+<p>
+  <input [id]="myId" type="text" value="[id]=myId"/>
+  <input id="{{myId}}" type="text" value="id={{myId}}"/>
+  <input id="{{myId}}" type="text" value="boolean value using property binding" [disabled]="isDisabled"/>
+  <input id="{{myId}}" type="text" value="(bind used)boolean value using property binding" bind-disabled="isDisabled"/>
+</p>
+<hr>
+<h2>
+ Class Binding
+</h2>
+<p class="text-success">Traditional Method</p>
+<p [class]="successText">Class binding Example</p>
+<p [class.text-failure]="hasError">Conditional Class binding</p>
+<p [ngClass]="messageClasses">Multiple Conditional Class binding</p>
+<hr>
+<h2>
+ Event Binding
+</h2>
+<button (click)="onClick($event)">Greet</button>
+{{greeting}}
+<button (click)="inLineEvent='This is In line event bindig'">Inline Greet</button>
+{{inLineEvent}}
+<p>Two Way Binding Example</p>
+<input [(ngModel)]="twoWayBind" type="text"/>
+{{twoWayBind}}
