@@ -1,6 +1,18 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
-
+<h1>Section 1 : Basics</h1>
 <app-binding></app-binding>
+
+<hr>
+<h1>Section 2 : Directives</h1>
+<app-directives></app-directives>
+
+<h1>Section 2 : Directives</h1>
+<app-directives></app-directives>
+
+<hr>
+<h1>Section 3 : Component Interaction</h1>
+<app-interaction (childEvent)="message=$event" [parentData]="parentInfo"></app-interaction>
+{{message}}
+
+<hr>
+<h1>Section 4 : Pipes</h1>
+<app-pipes></app-pipes>

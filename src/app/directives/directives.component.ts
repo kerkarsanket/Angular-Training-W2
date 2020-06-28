@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectivesComponent implements OnInit {
 
+  public displayName=true;
+
+  public color="red";
+
+  public colorList = ["red","blue","green", "yellow"]
+
   constructor() { }
 
   ngOnInit() {
