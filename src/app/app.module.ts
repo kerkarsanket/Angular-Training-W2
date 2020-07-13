@@ -11,11 +11,20 @@ import { PipesComponent } from './pipes/pipes.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { EmployeeService } from './employee.service';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { DepartmentListComponent } from './department-list/department-list.component'
+import { Routes, RouterModule } from '@angular/router';
+
+
+const routes: Routes = [
+  { path: "department", component: DepartmentListComponent },
+  { path: "employee", component: EmployeeListComponent}
+]
+
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, HttpClientModule ],
-  declarations: [ AppComponent, HelloComponent, BindingComponent, DirectivesComponent, InteractionComponent, PipesComponent, EmployeeListComponent, EmployeeDetailsComponent ],
+  imports:      [ BrowserModule, FormsModule, HttpClientModule, RouterModule.forRoot(routes) ],
+  declarations: [ AppComponent, HelloComponent, BindingComponent, DirectivesComponent, InteractionComponent, PipesComponent, EmployeeListComponent, EmployeeDetailsComponent, DepartmentListComponent ],
   bootstrap:    [ AppComponent ],
   providers: [EmployeeService]
 })
