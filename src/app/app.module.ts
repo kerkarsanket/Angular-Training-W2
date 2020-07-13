@@ -11,9 +11,10 @@ import { PipesComponent } from './pipes/pipes.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { EmployeeService } from './employee.service';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
+  imports:      [ BrowserModule, FormsModule, HttpClientModule ],
   declarations: [ AppComponent, HelloComponent, BindingComponent, DirectivesComponent, InteractionComponent, PipesComponent, EmployeeListComponent, EmployeeDetailsComponent ],
   bootstrap:    [ AppComponent ],
   providers: [EmployeeService]
