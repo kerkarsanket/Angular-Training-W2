@@ -10,6 +10,7 @@ export class EmployeeDetailsComponent implements OnInit {
 
   public employees = [];
   public errorMsg;
+  
   constructor(private _employeeService : EmployeeService) { }
 
   ngOnInit() {
