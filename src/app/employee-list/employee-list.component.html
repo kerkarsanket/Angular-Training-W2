@@ -7,5 +7,5 @@ Employee List
 </p>
 
 <ul *ngFor="let employee of employees">
-  <li>{{employee.name}}</li>
+  <li><button (click)="onSelect(employee)">{{employee.name}}</button></li>
 </ul>

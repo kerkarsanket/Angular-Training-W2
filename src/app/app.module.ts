@@ -14,17 +14,20 @@ import { EmployeeService } from './employee.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DepartmentListComponent } from './department-list/department-list.component'
 import { Routes, RouterModule } from '@angular/router';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 const routes: Routes = [
   { path: "department", component: DepartmentListComponent },
-  { path: "employee", component: EmployeeListComponent}
+  { path: "employee", component: EmployeeListComponent},
+  { path: "employee/:id", component: EmployeeDetailsComponent},
+  { path: "**", component: PageNotFoundComponent}
 ]
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule, RouterModule.forRoot(routes) ],
-  declarations: [ AppComponent, HelloComponent, BindingComponent, DirectivesComponent, InteractionComponent, PipesComponent, EmployeeListComponent, EmployeeDetailsComponent, DepartmentListComponent ],
+  declarations: [ AppComponent, HelloComponent, BindingComponent, DirectivesComponent, InteractionComponent, PipesComponent, EmployeeListComponent, EmployeeDetailsComponent, DepartmentListComponent, PageNotFoundComponent ],
   bootstrap:    [ AppComponent ],
   providers: [EmployeeService]
 })
